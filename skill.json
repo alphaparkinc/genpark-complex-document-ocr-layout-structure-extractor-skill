@@ -1,0 +1,39 @@
+{
+  "name": "genpark-complex-document-ocr-layout-structure-extractor-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-modal PDF and complex tabular document OCR layout structure extractor preserving reading order and tables.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "document-intelligence",
+  "tags": [
+    "unstructured-io",
+    "ocr-layout",
+    "pdf-extraction",
+    "table-parser",
+    "document-ai"
+  ],
+  "inputs": {
+    "raw_pdf_bytes_base64": {
+      "type": "string"
+    },
+    "extract_tables_as_html": {
+      "type": "boolean"
+    }
+  },
+  "outputs": {
+    "document_extraction_id": {
+      "type": "string"
+    },
+    "pages_parsed_count": {
+      "type": "integer"
+    },
+    "tabular_structures_extracted_count": {
+      "type": "integer"
+    },
+    "structured_markdown_export_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
